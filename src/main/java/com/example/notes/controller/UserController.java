@@ -51,7 +51,7 @@ public class UserController {
     }
 
     @PatchMapping("/paw/{userId}")
-    @CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.POST, RequestMethod.PATCH}, allowCredentials = "true")
+    @CrossOrigin(origins = "http://toddo.co", methods = {RequestMethod.POST, RequestMethod.PATCH}, allowCredentials = "true")
     public ResponseEntity<Integer> updateUserPaw(@PathVariable Integer userId, @RequestParam(name = "paw") Integer paw) {
         int userPawValue = userService.updateUserPaw(userId, paw);
         return ResponseEntity.ok(userPawValue);

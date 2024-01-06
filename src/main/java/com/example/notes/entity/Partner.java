@@ -27,5 +27,5 @@ public class Partner {
     private String partnerText;
 
     @Column(name = "how_paw", columnDefinition = "INT")
-    private String howPaw; 
+    private String howPaw;
 }

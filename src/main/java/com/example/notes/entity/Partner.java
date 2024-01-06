@@ -26,6 +26,6 @@ public class Partner {
     @Column(name = "partner_text", columnDefinition = "TEXT")
     private String partnerText;
 
-    @Column(name = "input_date", columnDefinition = "INT")
+    @Column(name = "how_paw", columnDefinition = "INT")
     private String howPaw; 
 }

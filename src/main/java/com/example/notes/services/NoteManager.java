@@ -24,8 +24,8 @@ public class NoteManager implements NoteService{
     }
 
     @Override
-    public List<Note> getAllNotes(int userId, String isCompleted) {
-        return noteRepository.findByUserIdAndIsCompleted(userId, isCompleted); 
+    public List<Note> getAllNotes(int userId, List<String> isCompleted) {
+        return noteRepository.findByUserIdAndIsCompletedIn(userId, isCompleted); 
     }
 
     @Override

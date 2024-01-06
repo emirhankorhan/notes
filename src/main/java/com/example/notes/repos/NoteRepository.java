@@ -6,5 +6,5 @@ import java.util.List;
 
 
 public interface NoteRepository extends JpaRepository<Note, Integer>{
- public List<Note> findByUserIdAndIsCompleted(int userId, String isCompleted);    
+    public List<Note> findByUserIdAndIsCompletedIn(int userId, List<String> isCompleted);    
 }

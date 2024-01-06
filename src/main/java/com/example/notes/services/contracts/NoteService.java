@@ -4,7 +4,7 @@ import java.util.List;
 import com.example.notes.entity.Note;
 
 public interface NoteService {
-    List<Note> getAllNotes(int userId, String isCompleted);
+    List<Note> getAllNotes(int userId, List<String> isCompleted);
     Note getOneNoteById(int id);
     Note createOneNote(Note product);
     Note updateOneNote(int id, String state);

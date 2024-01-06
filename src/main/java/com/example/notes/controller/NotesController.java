@@ -1,5 +1,7 @@
 package com.example.notes.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +35,7 @@ public class NotesController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllNotes(@RequestParam int userId, @RequestParam String isCompleted) {
+    public ResponseEntity<?> getAllNotes(@RequestParam int userId, @RequestParam List<String> isCompleted) {
         var notes = noteService.getAllNotes(userId, isCompleted);
         return new ResponseEntity<>(notes, HttpStatus.OK);
     }
